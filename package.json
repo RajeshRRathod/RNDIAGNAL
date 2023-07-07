@@ -7,13 +7,16 @@
     "ios": "npx react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && rm -rf ./android/app/src/main/res/drawable-mdpi/ && rm -rf ./android/app/src/main/res/raw/",
+    "release_android": "yarn build && cd ./android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.71.3",
     "react-native-fast-image": "^8.6.3",
-    "react-native-super-grid": "^5.0.0"
+    "react-native-super-grid": "^5.0.0",
+    "react-native-walkthrough-tooltip": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
