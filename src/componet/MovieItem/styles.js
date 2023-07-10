@@ -15,5 +15,14 @@ export default StyleSheet.create({
         fontSize: 16,
         fontFamily: FONT.TITILLIUM_WEB,
 
+    },
+    movie_name_transparent: {
+        color: ALL_COLORS.white,
+        fontSize: 16,
+        fontFamily: FONT.TITILLIUM_WEB,
+        position: 'absolute',
+        top: 0,
+        color: "transparent"
+
     }
 });

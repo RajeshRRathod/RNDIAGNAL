@@ -167,17 +167,20 @@ const MovieListScreen = () => {
         </View>
     );
 
+    const renderFooter = () => (
+        <View style={{ minHeight: 20 }} />
+    );
+
     return (
         <SafeAreaView style={styles.backgroundStyle}>
             <StatusBar
-                barStyle={'light-content'}
-                backgroundColor={styles.backgroundStyle}
+                hidden
             />
             <View style={styles.marginHorizontal}>
 
-                <HeaderView title={movieTitle} onPress={searchVisibility} />
 
-                <View style={{ flex: 1, backgroundColor: "black" }}>
+
+                <View style={{ flex: 1 }}>
                     {isSearchVisible && <View style={styles.search_root}>
                         <TextInput
                             placeholder={STRINGS_DATA.SEARCH_PLAHOLDER}
@@ -197,10 +200,11 @@ const MovieListScreen = () => {
                         data={movieList}
                         style={{
                             flex: 1,
-                            marginTop: CONST_VALUE.MOVIE_TOP_SPACE
+                            paddingTop: isSearchVisible ? 20 : (CONST_VALUE.HEADER_HEIGHT - 20),
+
                         }}
                         keyExtractor={(item, index) => item.name + index + Math.random()}
-                        spacing={10}
+                        spacing={15}
                         renderItem={({ item }) =>
                             <MovieItem data={item} url={getImage(item['poster-image'])} />
                         }
@@ -208,7 +212,9 @@ const MovieListScreen = () => {
                         onEndReached={handleLoadMore}
                         onEndReachedThreshold={0.1}
                         ListEmptyComponent={renderEmptyView}
+                        ListFooterComponent={renderFooter}
                     />
+                    <HeaderView title={movieTitle} onPress={searchVisibility} />
                 </View>
             </View>
         </SafeAreaView>

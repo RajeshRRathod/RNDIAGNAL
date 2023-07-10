@@ -5,12 +5,17 @@ export default StyleSheet.create({
 
     item_root: {
         height: CONST_VALUE.HEADER_HEIGHT,
+        marginHorizontal: 15,
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+
     },
     toolbar_root: {
         flexDirection: "row",
-        marginHorizontal: 10,
-        height: 60,
         alignItems: 'center',
+        backgroundColor: 'black'
     },
     icon_size:
     {

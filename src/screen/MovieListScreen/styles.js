@@ -4,18 +4,20 @@ import { ALL_COLORS, CONST_VALUE, FONT } from '../../utility/consts';
 export default StyleSheet.create({
     backgroundStyle: {
         flex: 1,
-        backgroundColor: ALL_COLORS.black
+        backgroundColor: ALL_COLORS.black,
     },
     marginHorizontal: {
         flex: 1,
-        marginHorizontal: 5,
+        backgroundColor: 'rgba(255,255,255,0)'
+
     },
     search_root: {
         height: CONST_VALUE.SEACH_BOX_HEIGHT,
-        marginHorizontal: 10,
+        marginHorizontal: 15,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 60,
     },
     search_input: {
         color: ALL_COLORS.white,
