@@ -4,7 +4,6 @@ RNDiagnal is a mobile application built using React Native framework. It is show
 
 
 ![MovieList](https://github.com/RajeshRRathod/RNDiagnal/assets/82945096/f2d8ecc0-4797-4ffc-b97b-a1d8d5b8341a)
-{:.some-css-class style="width: 200px"}
 
 # Table of Contents
 Features
